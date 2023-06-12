@@ -1,6 +1,6 @@
-def check_problema2(problema1, string):
+def check_problema2(problema2, string):
     try:
-        with open(problema1, 'r') as file:
+        with open(problema2, 'r') as file:
             for line in file:
                 line_without_spaces = line.replace(" ", "")
                 if string in line_without_spaces:
@@ -10,7 +10,7 @@ def check_problema2(problema1, string):
         print(f"Error: Could not open file '{file_path}'")
 
 
-problema1 = 'problema1.ino'
+problema2 = 'problema2.ino'
 string1 = 'led_pin=5'
 string2 =  'digitalWrite(led_pin,HIGH)'
 
