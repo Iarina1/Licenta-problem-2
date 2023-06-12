@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
 //TODO: put your pin number here;
-uint8_t led_pin = 5;
+uint8_t led_pin;
 
 void turn_led_on(uint8_t led_pin) {
     //TODO: turn on the led
