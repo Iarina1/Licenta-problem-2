@@ -16,8 +16,8 @@ string2 =  'digitalWrite(led_pin,HIGH)'
 
 if check_problema2(problema2, string1):
     if check_problema2(problema2, string2):
-      print("Punctaj total: 10")
+      print("Punctaj total: 10/10")
     else:
-      print("Punctaj total: 5")
+      print("Punctaj total: 5/10")
 else:
     print("Punctaj total: 0")
