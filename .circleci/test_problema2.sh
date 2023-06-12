@@ -1,0 +1,1 @@
+python3 .circleci/test-problema2.py | tee /tmp/test_output.txt
