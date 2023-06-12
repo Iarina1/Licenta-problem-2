@@ -14,9 +14,9 @@ problema2 = 'problema2.ino'
 string1 = 'led_pin=5'
 string2 =  'digitalWrite(led_pin,HIGH)'
 
-if check_problema2(problema1, string1):
+if check_problema2(problema2, string1):
     print("Test 1 passed")
-    if check_problema2(problema1, string2):
+    if check_problema2(problema2, string2):
       print("Test 2 passed")
       print("Punctaj total: 10")
     else:
