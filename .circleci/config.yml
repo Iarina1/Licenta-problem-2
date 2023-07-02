@@ -1,37 +1,24 @@
-version: 2
+version: 2.1
+
 jobs:
-  build-arduino-default:
-    machine: true
+  arduino-ci-test:
+    docker:
+      - image: circleci/ruby:2.6
     steps:
       - checkout
-      
-      - run:
-          name: Make scripts executable 
-          command: sudo chmod -R +x ./.circleci/*.sh
-          
       - run:
           name: Install
-          command: ./.circleci/install_arduino.sh
-          
-      - run:
-          name: Build
-          command: ./.circleci/build_problema2.sh
-          
+          command:
+            bundle install
       - run:
           name: Test
-          command: ./.circleci/test_problema2.sh
-          
+          command:
+            bundle exec arduino_ci_remote.rb 2> /tmp/test_output.txt
       - store_artifacts:
-          path: /tmp/build_output.txt
-          destination: build_output
-          
-      - store_artifacts:
-          path: /tmp/test_output.txt
-          destination: test_output
-      
+            path: /tmp/test_output.txt
+            destination: test_output
 
 workflows:
-  version: 2
-  build:
+  arduino-ci-workflow:
     jobs:
-      - build-arduino-default
+      - arduino-ci-test
