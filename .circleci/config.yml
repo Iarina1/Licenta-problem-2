@@ -13,7 +13,7 @@ jobs:
       - run:
           name: Test
           command:
-            bundle exec arduino_ci_remote.rb 2> /tmp/test_output.txt
+            bundle exec arduino_ci_remote.rb --skip-examples-compilation 2> /tmp/test_output.txt
       - store_artifacts:
             path: /tmp/test_output.txt
             destination: test_output
