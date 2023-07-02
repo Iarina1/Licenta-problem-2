@@ -6,7 +6,7 @@
 #define LED_BULTIN2 12
 #define LED_BUILTIN3 11
 
-unittest(blink)
+unittest(led)
 {
     Led led;
     GodmodeState* state = GODMODE();
