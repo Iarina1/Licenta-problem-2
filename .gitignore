@@ -1,5 +1,0 @@
-.bundle/*
-vendor/*
-*.dSYM/*
-Gemfile.lock
-*.cpp.bin
