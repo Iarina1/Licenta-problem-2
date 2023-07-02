@@ -4,7 +4,7 @@
 
 #define LED_BUILTIN1 13
 #define LED_BULTIN2 12
-#DEFINE LED_BUILTIN3 11
+#define LED_BUILTIN3 11
 
 unittest(blink)
 {
